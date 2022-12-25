@@ -1,5 +1,16 @@
 :root {
 
+/* 
+#FFBA08
+#FE5D26
+#7EBC89
+#222823
+#7B0D1E
+#7C6A0A
+*/
+    --color-p : #FF4600;
+    --color-bg-: #CC980C;
+    --color-bg-: #4A1E0D;
 
 
     --size-text: 1.5rem;
@@ -9,12 +20,12 @@
 
     --line-height: 2.0rem;
 
-    --color-sidebar-bg: #2f855a;
+    --color-sidebar-bg: #2e2b2b;
     --sidebar-item-hover: #38a169;
     --sidebar-item-active: #276749;
     --color-menu-link: #0c6588;
 
-    --color-bg-body: #eee;
+    --color-bg-body: #ffffff;
     --color-bg-main: #fff;
 
     --color-title: #333;
@@ -34,7 +45,7 @@ THEMES / OPTIONS
 
 [data-mode="dark"] {
     
-    --color-sidebar-bg: #2f855a;
+    --color-sidebar-bg: #000000;
     --sidebar-item-hover: #38a169;
     --sidebar-item-active: #276749;
     --color-menu-link: #0c6588;
