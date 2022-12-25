@@ -24,9 +24,13 @@ span{
   text-align: center;
   color: #2c3e50;
 }
+body{
+  background: #222823;
+}
 
 h1 {
-  color: rgb(72, 5, 5);
+  color: #FFBA08
+;
   font-size: 56px;
   line-height: 53px;
   margin: 0;

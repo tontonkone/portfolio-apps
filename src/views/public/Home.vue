@@ -10,15 +10,17 @@
         <LetterAnime :classl="classl" :char="jobchar" :idx=12 />
       </h1>
     </div>
+    <LogoAnime/>
   </div>
 </template>
 
 <script>
 import { ref, watchEffect } from 'vue'
 import LetterAnime from '@/components/letter/LetterAnime.vue'
+import LogoAnime from '@/components/logo/LogoAnime.vue'
 
 export default {
-  components: {LetterAnime },
+  components: {LetterAnime, LogoAnime },
   setup() {
     const classl = ref('text-animate')
     const present = ref([... 'Je suis'])

@@ -39,7 +39,7 @@ export default {
 
     &:hover {
         animation: rubberBand 1s;
-        color: #ffd700;
+        color: #FE5D26;
     }
 }
 
