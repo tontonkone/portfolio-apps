@@ -1,0 +1,54 @@
+:root {
+
+
+
+    --size-text: 1.5rem;
+    --size-title-1: 3.6rem;
+    --size-title-2: 3.6rem;
+    --size-title-3: 2.4rem;
+
+    --line-height: 2.0rem;
+
+    --color-sidebar-bg: #2f855a;
+    --sidebar-item-hover: #38a169;
+    --sidebar-item-active: #276749;
+    --color-menu-link: #0c6588;
+
+    --color-bg-body: #eee;
+    --color-bg-main: #fff;
+
+    --color-title: #333;
+    --color-text: #555;
+    --color-link: #0c6588;
+    --color-link-hover: #111;
+    --color-menu: #e2f7ff;
+
+    --border-sm: 1px solid #eee;
+    --border-md: 1px solid #ddd;
+    --border-lg: 2px solid #ccc;
+}
+
+/* *****************************************************************
+THEMES / OPTIONS
+***************************************************************** */
+
+[data-mode="dark"] {
+    
+    --color-sidebar-bg: #2f855a;
+    --sidebar-item-hover: #38a169;
+    --sidebar-item-active: #276749;
+    --color-menu-link: #0c6588;
+
+    --color-bg-body: #eee;
+    --color-bg-main: #fff;
+
+    --color-title: #333;
+    --color-text: #555;
+    --color-link: #0c6588;
+    --color-link-hover: #111;
+    --color-menu: #e2f7ff;
+
+    --border-sm: 1px solid #eee;
+    --border-md: 1px solid #ddd;
+    --border-lg: 2px solid #ccc;
+}
