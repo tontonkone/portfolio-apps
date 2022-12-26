@@ -1,13 +1,12 @@
 <template>
-  <div class="separator">
-    <i class="fab fa-linkedin-in icon"></i>
-    <i class="fab fa-github icon"></i>
-  </div>
+  <div class="separator"></div>
+  <SocialLink />
 </template>
 
 <script>
+import SocialLink from './SocialLink.vue'
 export default {
-
+    components: {SocialLink}
 }
 </script>
 
@@ -16,13 +15,8 @@ export default {
     height: 1px;
     width: 50%;
     background: yellow;
-    margin: 2rem 0rem;
+    margin: 1rem 0rem;
     display: inline-block;
 }
 
-.icon{
-    font-size: 2rem;
-    margin: 1rem;
-    color: orangered;
-}
 </style>

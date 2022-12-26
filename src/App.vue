@@ -25,7 +25,7 @@ span{
   color: #2c3e50;
 }
 body{
-  background: #222823;
+  background: #6c0481;
 }
 
 h1 {

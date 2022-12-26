@@ -70,7 +70,7 @@ export default {
 <style lang="scss" scoped>
 .container-logo{
     position: absolute;
-    z-index: 0;
+    z-index: -1;
     top: 0;
     right: 2%;
     left: auto;
