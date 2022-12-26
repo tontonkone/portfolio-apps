@@ -8,9 +8,12 @@
         <LetterAnime :classl="classl" :char="char" :idx=6 />
         <br />
         <LetterAnime :classl="classl" :char="jobchar" :idx=12 />
-      </h1>
+       </h1>
+       <Separator/>
+      <ButtonLink />
     </div>
     <LogoAnime/>
+ 
   </div>
 </template>
 
@@ -18,9 +21,11 @@
 import { ref, watchEffect } from 'vue'
 import LetterAnime from '@/components/letter/LetterAnime.vue'
 import LogoAnime from '@/components/logo/LogoAnime.vue'
+import ButtonLink from '@/components/button/ButtonLink.vue'
+import Separator from '@/components/separator/Separator.vue'
 
 export default {
-  components: {LetterAnime, LogoAnime },
+  components: {LetterAnime, LogoAnime, ButtonLink, Separator },
   setup() {
     const classl = ref('text-animate')
     const present = ref([... 'Je suis'])

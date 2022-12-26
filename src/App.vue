@@ -31,7 +31,7 @@ body{
 h1 {
   color: #FFBA08
 ;
-  font-size: 56px;
+  font-size: 48px;
   line-height: 53px;
   margin: 0;
   font-family: Coolvetica;
