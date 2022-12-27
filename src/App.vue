@@ -26,6 +26,7 @@ span{
 }
 body{
   background: #6c0481;
+  overflow-y: none;
 }
 
 h1 {
@@ -36,16 +37,5 @@ h1 {
   margin: 0;
   font-family: Coolvetica;
 }
-nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>

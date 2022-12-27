@@ -1,5 +1,5 @@
 <template>
-    <div class="container-logo">
+    <div class="logo--svg">
 <svg width="900" height="800" viewBox="0 0 680 505" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_15_11)">
         <path
@@ -68,16 +68,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container-logo{
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: 2%;
-    left: auto;
-    margin: auto;  
-}
-svg{
-    width: 100%;
+img{
+width: 100%;
 }
 
 path{
@@ -87,7 +79,7 @@ path{
     stroke-dashoffset: 0;
     stroke-dasharray: 4000;
 
-    animation: logo 10s ease-in-out forwards;
+    animation: logo 5s ease-in-out ;
 }
 
 
