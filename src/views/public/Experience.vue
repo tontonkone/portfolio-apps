@@ -1,15 +1,15 @@
 <template>
    
-    <div>
+    <div class="container">
         <LetterTitle>
             <h1>Expériences</h1>
         </LetterTitle>
-        <div class="skill">
+        <div class="container__skill">
             
-            <div class="skill__img">
+            <div class="container__skill--img">
                 <img src="@/assets/img/skill-c.svg" alt="photo de profils">
             </div>
-            <div class="skill__logosvg">
+            <div class="skill--logosvg">
                 <ul>
                     <li v-for="icon in icons" :key="icon.name">
                         <img :src="icon.link" :alt="icon.name">
@@ -42,30 +42,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.skill{
-    display: flex;
-    flex-direction: row;
-    padding-top: 5rem;
+.container{
 
-    ul {
-        flex: 1;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-/*         padding: .3rem;
+    margin: 2rem ;
+    
+    &__skill{
+
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap; */
+        padding-top: 10rem;
+    }
+
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
 
         li {
             list-style-type: none;
             cursor: pointer;
+
             img{
                 width:10rem;
                 margin:2rem;
             }
         }
     }
-    &__img{
+    &__skill--img{
  
         img{
             width: 80%;
