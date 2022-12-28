@@ -22,6 +22,7 @@
                     quisquam culpa voluptas iusto, quae maiores quo dolorum, corporis laboriosam a dolore consequatur
                     assumenda
                     nam!</p>
+                    <ButtonDownload />
             </div>
             <div class="container__img">
                 <img src="@/assets/img/profil-c.svg" alt="photo de profils">
@@ -32,8 +33,10 @@
 
 <script>
 import LetterTitle from '@/components/letter/LetterTitle.vue';
+import ButtonDownload from '@/components/button/ButtonDownload.vue';
+
 export default {
-    components: { LetterTitle },
+    components: { LetterTitle, ButtonDownload },
     setup() {
     }
 }
@@ -54,7 +57,7 @@ export default {
 
 
     &__info {
-        
+
         width: 50%;
         margin: 0px 100px;
 
