@@ -1,6 +1,6 @@
 <template>
     <div class="logo--svg">
-<svg width="900" height="800" viewBox="0 0 680 505" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="800" viewBox="0 0 680 505" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_15_11)">
         <path
             d="M105.819 23.8875C17.42 24.1934 20.1134 100.051 19.3107 182.389C18.5077 264.745 16.625 345.794 105.016 345.794L514.652 342.192L513.516 22.5593L105.819 23.8875Z"
@@ -68,8 +68,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-img{
-width: 100%;
+
+svg{
+    width: 100%;
 }
 
 path{

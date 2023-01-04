@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <div class="home">
     <!--Text container -->    
-    <div class="container__text" :class="{ 'move-text': collapsed }">
+    <div class="home__text" :class="{ 'move-text': collapsed }">
       <h1>
         <LetterAnime :classl="classl" :char="present" :idx=1 />
         <br>
@@ -14,7 +14,7 @@
       <ButtonLink />
     </div>
     <!-- logo container -->    
-    <div class="container__logobig">
+    <div class="home__logobig">
       <LogoAnime/>
     </div>
  
@@ -42,19 +42,22 @@ export default {
       classl.value = "text-animate-hover"
     }, 3000))
     
-    return { classl, jobchar, char, present, collapsed }
+    return { classl, jobchar, char, present, collapsed}
   }
 }
 </script> 
 
 <style lang="scss" scoped>
-.container {
+.home {
   display: flex;
   flex-direction: row;
 
+  svg{
+    height: auto;
+  }
   &__text{
     text-align: left;
-    margin-left: 210px;
+    margin-left: 13rem;
     margin-top: 15rem;
 
   }
@@ -62,11 +65,7 @@ export default {
     margin: 0;
   }
   &__logobig{
-    margin: .1rem;
-  }
-  .move-text{
-    margin-left: 100px;
-  }
+    width: 60%;  }
 
   img {
     opacity: 0;
@@ -78,4 +77,7 @@ export default {
     margin-left: -7px;
   }
 }
+.move-text {
+    margin-left: 100px;
+  }
 </style>

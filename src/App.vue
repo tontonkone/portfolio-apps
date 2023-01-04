@@ -23,19 +23,22 @@ span{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  
 }
+.move{
+  margin-left: 100px;
+}
+
 body{
-  background: #6c0481;
+  background: #ffffff;
   overflow-y: none;
 }
 
 h1 {
-  color: #FFBA08
-;
-  font-size: 48px;
+  color: #ff3d08;
+  font-size: 30px;
   line-height: 53px;
   margin: 0;
   font-family: Coolvetica;
 }
-
 </style>

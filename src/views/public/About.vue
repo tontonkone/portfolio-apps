@@ -1,32 +1,25 @@
 <template>
-    <div class="container">
         <LetterTitle>
             <h1>Profil</h1>
         </LetterTitle>
+    <div class="about">
 
-        <div class="container__about">
 
-            <div class="container__info">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aperiam officia possimus delectus
-                    inventore quod
-                    quisquam culpa voluptas iusto, quae maiores quo dolorum, corporis laboriosam a dolore consequatur
-                    assumenda
-                    nam!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aperiam officia possimus delectus
-                    inventore quod
-                    quisquam culpa voluptas iusto, quae maiores quo dolorum, corporis laboriosam a dolore consequatur
-                    assumenda
-                    nam!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aperiam officia possimus delectus
-                    inventore quod
-                    quisquam culpa voluptas iusto, quae maiores quo dolorum, corporis laboriosam a dolore consequatur
-                    assumenda
-                    nam!</p>
-                    <ButtonDownload />
-            </div>
-            <div class="container__img">
-                <img src="@/assets/img/profil-c.svg" alt="photo de profils">
-            </div>
+        <div class="about__info" :class="{ 'move-text': collapsed }">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aperiam officia possimus delectus
+                inventore quod
+                quisquam culpa voluptas iusto, quae maiores quo dolorum, corporis laboriosam a dolore consequatur
+                assumenda
+                nam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aperiam officia possimus delectus
+                inventore quod
+                quisquam culpa voluptas iusto, quae maiores quo dolorum, corporis laboriosam a dolore consequatur
+                assumenda
+                nam!</p>
+                <ButtonDownload />
+        </div>
+        <div class="about__img">
+            <img src="@/assets/img/profil-c.svg" alt="photo de profils">
         </div>
     </div>
 </template>
@@ -34,48 +27,44 @@
 <script>
 import LetterTitle from '@/components/letter/LetterTitle.vue';
 import ButtonDownload from '@/components/button/ButtonDownload.vue';
+import { collapsed } from '@/components/sidebar/state'
+
 
 export default {
     components: { LetterTitle, ButtonDownload },
     setup() {
+        return {collapsed}
     }
 }
 </script>
 
 <style lang="scss" scoped>
-.container {
+.about {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
 
-    margin: 3rem;
-
-    &__about{
-
-        display: flex;
-        flex-direction: row;
-
-        padding: 13rem 7rem;
+    svg{
+        width: 100%;
+        height: auto;
     }
-
 
     &__info {
-
-        width: 50%;
-        margin: 0px 100px;
+        text-align: left;
+        margin-top: 15rem;
+        text-align: left;
+        margin-left: 13rem;
 
         p {
-            text-align: left;
+            color: rgb(19, 19, 9);
         }
     }
-
     &__img {
+        width: 60%;
 
-        img {
-            width: 100%;
-
-        }
     }
-
-    p {
-        color: yellow;
+    .move-text {
+        margin-left: 100px;
     }
 }
 </style>

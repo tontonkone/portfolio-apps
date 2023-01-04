@@ -1,12 +1,12 @@
 
 <template>
     <div class="sidebar" :style="{ width: computedSideBarWidth }">
-        <h1>
+        <div>
             <span v-if="collapsed">
                 <div class="logo-small"><img src="@/assets/img/LogoBas.png" alt="logo" ></div>
             </span>
             <span v-else class="logo-big"><img src="@/assets/img/LogoBas.png" alt="logo"></span>
-        </h1>
+        </div>
 
         <SidebarLink to="/" icon="fas fa-users">Home</SidebarLink>
         <SidebarLink to="/about" icon="fas fa-columns">About</SidebarLink>
