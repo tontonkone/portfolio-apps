@@ -30,13 +30,68 @@
         </div>
     </div>
 </template>
-
 <script>
 import LetterTitle from '@/components/letter/LetterTitle.vue';
+import {string,objet} from 'yup'
+import { object } from 'yup/lib/locale';
 export default {
     components: { LetterTitle },
     setup() {
 
+        const schema = object().shape({
+            email: string()
+                        .required("Email requis")
+                        .email("Entrez un email valide"),
+            name: string()
+                        .required("Nom requis"),
+            subject: string()
+                        .required("Sujet requis"),
+            message: string()
+                        .required("Message requis"),
+        })
+        const values = ref({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+        });
+        const errors = ref({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+        })
+        const load = false;
+
+        const validate = (field)=> {
+            schema.value
+                   .validateAt(field, values.value)
+                   .then(()=>{ 
+                       errors.value[field] = "";
+                   })
+                   .catch((err)=> {
+                    errors.value[field] = err.message;
+                   });
+
+        }
+
+        const sendMail = () => {
+            load.value = true;
+            schema.value
+                .validate(values.value, { abortEarly: false })
+                .then((res) => {
+                    errors.value = {};
+
+                    emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', form.value, 'USER_ID')
+                        .then(() => {
+                            alert('Message sent!')
+                            load.value = false;
+                            values.value = {};
+                        }, (error) => {
+                            alert('Message not sent', error);
+                        });
+                })
+        }
     }
 }
 </script>

@@ -11,8 +11,15 @@
             </div>
             <div class="skill--logosvg">
                 <ul>
-                    <li v-for="icon in icons" :key="icon.name">
-                        <img :src="icon.link" :alt="icon.name">
+                    <li v-for="lang in langs" :key="lang.name">
+                        <img :src="lang.link" :alt="lang.name">
+                    </li>
+                </ul>
+            </div>
+            <div class="logo--libs">
+                <ul>
+                    <li v-for="lib in libs" :key="lib.name">
+                        <img :src="lib.link" :alt="lib.name">
                     </li>
                 </ul>
             </div>
@@ -27,7 +34,7 @@ import LetterTitle from '@/components/letter/LetterTitle.vue'
 export default {
     components:{LetterTitle},
     setup() {
-        const icons = ref([
+        const langs = ref([
             { name: 'logo php', link: require('@/assets/img/skill/php.svg') },
             { name: 'logo html', link: require('@/assets/img/skill/html.svg') },
             { name: 'logo vue', link: require('@/assets/img/skill/vue.svg') },
@@ -36,7 +43,14 @@ export default {
             { name: 'logo jquery', link: require('@/assets/img/skill/jquery.svg') },
         ])
 
-        return { icons }
+        const libs = ref([
+            { name: 'logo php', link: require('@/assets/img/skill/php.svg') },
+            { name: 'logo html', link: require('@/assets/img/skill/html.svg') },
+            { name: 'logo vue', link: require('@/assets/img/skill/vue.svg') },
+            { name: 'logo css', link: require('@/assets/img/skill/css.svg') },
+        ])
+
+        return { langs,libs }
     }
 }
 </script>
