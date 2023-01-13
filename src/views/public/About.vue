@@ -40,7 +40,6 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-    padding: 1rem;
     display: flex;
     flex-direction: row;
 
