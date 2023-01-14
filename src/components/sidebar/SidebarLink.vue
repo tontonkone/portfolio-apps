@@ -32,7 +32,6 @@ export default {
 </script>
 
 <style scoped>
-
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.1s;
@@ -64,6 +63,9 @@ export default {
 
 .link.active {
     background-color: var(--sidebar-item-active);
+}
+.link.scrol{
+        background-color: var(--sidebar-item-active);
 }
 
 .link .icon {

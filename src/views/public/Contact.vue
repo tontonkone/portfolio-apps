@@ -1,12 +1,12 @@
 <template>
   <div class="contact">
 
-    <div class="container">
-      <div class="container__img">
-        <img src="@/assets/img/message-c.svg" alt="photo de profils">
-      </div>
-
-      <div class="container__info">
+    <div class="contact">
+      <div class="contact__img">
+        <!-- <img src="@/assets/img/message-c.svg" alt="photo de profils">--> 
+        <LogoContact/>     
+    </div>
+      <div class="contact__info">
         <LetterTitle>
           <h1>Contact</h1>
         </LetterTitle>
@@ -53,11 +53,13 @@ import LetterTitle from '@/components/letter/LetterTitle.vue';
 import emailjs from '@emailjs/browser';
 import Snackbar from '@/components/help/Snackbar.vue';
 import config from '@/config.js'
+import LogoContact from '../../components/logo/LogoContact.vue';
 
 export default {
   name: "Contact",
   components: {
     Snackbar,
+    LogoContact,
   },
   props: {
     nightMode: {
@@ -124,70 +126,39 @@ export default {
 };
 </script>
 
-<style scoped>
-.title {
-  font-size: 30px;
-  font-weight: 500;
-}
+<style lang="scss" scoped>
+.contact {
+  display: flex;
+  flex-direction: row;
+  background-image: var(--image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 
-.title1 {
-  font-size: 24px;
-  font-weight: 400;
-}
-
-.title2 {
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.title3 {
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.pinput {
-  font-size: 18px;
-  outline: none;
-  border: none;
-  border-radius: 7px;
-  padding: 10px;
-  width: 50%;
-  transition: all 1s;
-}
-
-.btn {
-  border-color: #669db3ff;
-  color: #669db3ff;
-  width: 50%;
-}
-
-.btn:hover {
-  background-color: #669db3ff;
-  border-color: #669db3ff;
-  color: white;
-}
-
-.btn:focus {
-  background-color: #669db3ff;
-  border-color: #669db3ff;
-  color: white;
-}
-
-.pgray-dark {
-  background-color: #3c4148 !important;
-}
-
-@media screen and (max-width: 1000px) {
-  .pinput {
-    width: 90%;
+  svg {
+    height: auto;
   }
 
-  .pinput {
-    width: 90%;
+  &__info {
+    text-align: left;
+    margin-top: 10rem;
+    margin-left: 13rem;
+    flex: .5;
+
+    p {
+      color: rgb(19, 19, 9);
+    }
   }
 
-  .btn {
-    width: 90%;
+  &__img {
+    flex: 1;
+    padding: 10rem 2rem 0 0;
+  }
+
+  .move-text {
+    margin-left: 100px;
   }
 }
 </style>
