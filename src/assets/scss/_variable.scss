@@ -7,9 +7,13 @@
 #222823 vert 
 #7B0D1E
 #7C6A0A
+442500
+212119
+FFD3A0
 */
     --image: url('./assets/img/fond2.png');
     --image-s: url('./assets/img/fonds.png');
+    --image-sb: url('./assets/img/fondsb.png');
     --color-p : #FF4600;
     --color-bg-: #CC980C;
     --color-bg-: #4A1E0D;
@@ -47,7 +51,8 @@ THEMES / OPTIONS
 
 [data-mode="dark"] {
     --image: url('./assets/img/fond2.png');
-    --image-s: url('./assets/img/fond1.png')
+    --image-s: url('./assets/img/fond1.png');
+    --image-sb: url('./assets/img/fondsb.png');
     
     --color-sidebar-bg: #000000;
     --sidebar-item-hover: #38a169;

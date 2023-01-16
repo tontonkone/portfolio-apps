@@ -8,11 +8,11 @@
             <span v-else class="logo-big"><img src="@/assets/img/LogoBas.png" alt="logo"></span>
         </div>
 
-        <SidebarLink to="/" icon="fas fa-users">Home</SidebarLink>
-        <SidebarLink to="/about" icon="fas fa-columns">About</SidebarLink>
-        <SidebarLink to="/contact" icon="fas fa-user">Contact</SidebarLink>
-        <SidebarLink to="/experience" icon="fas fa-image">Experience</SidebarLink>
-        <SidebarLink to="/portfolio" icon="fas fa-image">Portfolio</SidebarLink>
+        <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink>
+        <SidebarLink to="/about" icon="fas fa-user">About</SidebarLink>
+        <SidebarLink to="/experience" icon="fas fa-terminal">Experience</SidebarLink>
+        <SidebarLink to="/portfolio" icon="fas fa-project-diagram">Portfolio</SidebarLink>
+        <SidebarLink to="/contact" icon="fas fa-envelope">Contact</SidebarLink>
 
         <span class="collapse-icon" :class="{ 'rotate-icon': collapsed }" @click="toggle">
             <i class="fas fa-angle-double-left"></i>
@@ -69,9 +69,11 @@ export default {
     }
     .collapse-icon {
         position: absolute;
-        bottom: 0;
-        padding: 0.75em;
-        color: rgba(255, 255, 255, 0.7);
+        top: 30rem;
+        color: #FFD3A0;
+        
+        font-size: x-large;
+
         transition: 0.2s linear;
     }
 

@@ -53,6 +53,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   width: 100%;
   height: 100%;
   
@@ -63,7 +64,9 @@ export default {
     height: auto;
   }
   &__text{
+    flex: 1;
     text-align: left;
+
     margin-left: 13rem;
     margin-top: 15rem;
 
@@ -72,7 +75,10 @@ export default {
     margin: 0;
   }
   &__logobig{
-    width: 60%;  }
+    flex: 1;
+    margin: 0;
+     padding: 0px;
+  }
 
   img {
     opacity: 0;

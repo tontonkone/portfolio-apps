@@ -3,37 +3,24 @@
 
     <div class="contact">
       <div class="contact__img">
-        <!-- <img src="@/assets/img/message-c.svg" alt="photo de profils">--> 
         <LogoContact/>     
     </div>
       <div class="contact__info">
-        <LetterTitle>
-          <h1>Contact</h1>
-        </LetterTitle>
-        <div class="text-center">
+        <h1>
+          <LetterAnime :classl="classl" :char="title" :idx=1 />
+        </h1>
+       <div class="text-center">
           <div>
 
-            <input type="text" name="user_name" v-model="name" placeholder="name" class="pinput" :class="{
-              pgray: !nightMode,
-              'pgray-dark': nightMode,
-              'text-light': nightMode,
-            }" style="transition-delay: 0.2s" />
+            <input type="text" name="user_name" v-model="name" placeholder="name"/>
           </div>
 
           <div>
-            <input type="email" name="user_email" v-model="email" placeholder="email" class="pinput" :class="{
-              pgray: !nightMode,
-              'pgray-dark': nightMode,
-              'text-light': nightMode,
-            }" style="transition-delay: 0.4s" />
+            <input type="email" name="user_email" v-model="email" placeholder="email"/>
           </div>
 
           <div>
-            <textarea name="message" v-model="text" placeholder="message" class="pinput" rows="4" :class="{
-              pgray: !nightMode,
-              'pgray-dark': nightMode,
-              'text-light': nightMode,
-            }" style="transition-delay: 0.6s"></textarea>
+            <textarea name="message" v-model="text" placeholder="message" ></textarea>
           </div>
 
           <button @click.prevent="sendEmail">
@@ -41,7 +28,10 @@
           </button>
         </div>
 
-        <Snackbar :showSnackbar="showSnackbar" @close="closeSnackbar" :snackbarMessage="snackbarMessage"
+        <Snackbar 
+          :showSnackbar="showSnackbar" 
+          @close="closeSnackbar" 
+          :snackbarMessage="snackbarMessage"
           :snackbarColor="snackbarColor" />
       </div>
 
@@ -49,17 +39,18 @@
   </div>
 </template>
 <script>
-import LetterTitle from '@/components/letter/LetterTitle.vue';
 import emailjs from '@emailjs/browser';
 import Snackbar from '@/components/help/Snackbar.vue';
 import config from '@/config.js'
 import LogoContact from '../../components/logo/LogoContact.vue';
+import LetterAnime from '@/components/letter/LetterAnime.vue';
 
 export default {
   name: "Contact",
   components: {
     Snackbar,
     LogoContact,
+    LetterAnime
   },
   props: {
     nightMode: {
@@ -74,6 +65,8 @@ export default {
       showSnackbar: false,
       snackbarMessage: "",
       snackbarColor: "",
+      classl:'text-animate',
+      title: 'Contact'
     };
   },
   methods: {
@@ -130,7 +123,7 @@ export default {
 .contact {
   display: flex;
   flex-direction: row;
-  background-image: var(--image);
+  background-image: var(--image-sb);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

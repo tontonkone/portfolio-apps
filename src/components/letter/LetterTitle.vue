@@ -19,7 +19,7 @@ export default {
         }
         const enterF = (el, done) => {
             gsap.to(el, {
-                duration: 5,
+                duration: 3,
                 x: -60,
                 opacity: 1,
                 ease: 'bounce.out',

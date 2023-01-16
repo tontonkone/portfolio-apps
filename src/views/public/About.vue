@@ -2,9 +2,9 @@
 
     <div class="about">
         <div class="about__info" :class="{ 'move-text': collapsed }">
-            <LetterTitle>
-                <h1>Profil</h1>
-            </LetterTitle>
+            <h1>
+                <LetterAnime :classl="classl" :char="title" :idx=1 />
+            </h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aperiam officia possimus delectus
                 inventore quod
                 quisquam culpa voluptas iusto, quae maiores quo dolorum, corporis laboriosam a dolore consequatur
@@ -25,16 +25,19 @@
 </template>
 
 <script>
-import LetterTitle from '@/components/letter/LetterTitle.vue';
+import { ref } from 'vue';
 import ButtonDownload from '@/components/button/ButtonDownload.vue';
 import { collapsed } from '@/components/sidebar/state';
 import LogoAboout from '@/components/logo/LogoAboout.vue';
+import LetterAnime from '@/components/letter/LetterAnime.vue';
 
 
 export default {
-    components: { LetterTitle, ButtonDownload,LogoAboout },
+    components: { LetterAnime, ButtonDownload,LogoAboout },
     setup() {
-        return {collapsed}
+        const classl = ref('text-animate')
+        const title = ref([... 'About'])
+        return {collapsed, title,classl}
     }
 }
 </script>
