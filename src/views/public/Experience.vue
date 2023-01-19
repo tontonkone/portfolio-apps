@@ -2,7 +2,7 @@
    
     <div class="skill">
         
-        <div class="skill__img">
+        <div class="skill__img" :class="{ 'move-text': collapsed }">
             <h1>
                 <LetterAnime :classl="classl" :char="title" :idx=1 />
             </h1>
@@ -27,6 +27,7 @@
 import { ref } from 'vue'
 import LetterAnime from '@/components/letter/LetterAnime.vue'
 import LogoExperience from '../../components/logo/LogoExperience.vue'
+import { collapsed } from '@/components/sidebar/state';
 
 export default {
     components:{ LogoExperience,LetterAnime},
@@ -50,27 +51,21 @@ export default {
             { name: 'logo css', link: require('@/assets/img/skill/css.svg') },
         ])
 
-        return { langs,classl,title }
+        return { langs,classl,title,collapsed }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/mixin';
 .skill{
-    display: flex;
-    flex-direction: row;
 
+    @include displayFlex();
     background-image: var(--image);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    width: 100%;
-    height: 100vh;
     
     &__img{
         flex: 1;
-        margin: 1rem;
+        @include positionLeft();
     }
     
     &__logosvg{
@@ -120,6 +115,9 @@ export default {
                 }
             }
         }
+    }
+    .move-text {
+        margin-left: 100px;
     }
 }
 </style>

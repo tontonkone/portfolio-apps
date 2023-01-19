@@ -38,7 +38,7 @@ export default {
     visibility: hidden;
     min-width: 250px;
     margin-left: -125px;
-    color: #fff;
+    color:var(--color-wh-black);
     text-align: center;
     border-radius: 7px;
     padding: 16px;

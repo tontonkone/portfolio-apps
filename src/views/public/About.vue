@@ -43,24 +43,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.about {
-    display: flex;
-    flex-direction: row;
+@import '../../assets/scss/mixin';
+body{
     background-image: var(--image-s);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
     width: 100%;
     height: 100vh;
+}
+.about {
+
+    display: flex;
+
 
     svg{
         height: auto;
     }
 
     &__info {
-        text-align: left;
-        margin-top: 10rem;
-        margin-left: 13rem;
+        @include positionLeft();
         flex: .5;
 
         p {

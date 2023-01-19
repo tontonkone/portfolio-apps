@@ -14,7 +14,7 @@ export default {
 .separator{
     height: 1px;
     width: 50%;
-    background: yellow;
+    background: var(--color-sep);
     margin: 1rem 0rem;
     display: inline-block;
 }

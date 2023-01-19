@@ -11,12 +11,24 @@
 212119
 FFD3A0
 */
-    --image: url('./assets/img/fond2.png');
-    --image-s: url('./assets/img/fonds.png');
-    --image-sb: url('./assets/img/fondsb.png');
+    --image: url('./assets/img/fonds/fondhaut.png');
+    --image-s: url('./assets/img/fonds/fondbas.png');
+    --image-sb: url('./assets/img/fonds/fondsbot.png');
+    
+    --color-bg-fond:#feffe5;
+    --color-wh-black:#fff;
     --color-p : #FF4600;
-    --color-bg-: #CC980C;
-    --color-bg-: #4A1E0D;
+    --color-1: #CC980C;
+    --color-2: #4A1E0D;
+
+    --color-orange:#FF4600;
+    --color-sep:#000;
+
+    --color-yellow:#F4E868;
+    --color-yellow1:#CC980C;
+
+    --color-red:#822003;
+    --color-sep:#555;
 
 
     --size-text: 1.5rem;
@@ -31,9 +43,16 @@ FFD3A0
     --sidebar-item-active: #276749;
     --color-menu-link: #0c6588;
 
-    --color-bg-body: #ffffff;
-    --color-bg-main: #fff;
+    --color-bg-btn: #FF4600;
+    --color-hover:#555;
+    --color-border-btn:#ff4600;
+    --color-hover-bg:#CC980C ;
+    --color-hover-border-btn:#CC980C;
+    --color-hover-btn:#ff4600;
 
+
+    --color-h1:#ff4600;
+    --color-hover-h1:#CC980C; 
     --color-title: #333;
     --color-text: #555;
     --color-link: #0c6588;
@@ -50,10 +69,10 @@ THEMES / OPTIONS
 ***************************************************************** */
 
 [data-mode="dark"] {
-    --image: url('./assets/img/fond2.png');
-    --image-s: url('./assets/img/fond1.png');
-    --image-sb: url('./assets/img/fondsb.png');
-    
+    --image: url('./assets/img/fonds/fondhaut.png');
+    --image-s: url('./assets/img/fonds/fondbas.png');
+    --image-sb: url('./assets/img/fonds/fondsbot.png');
+
     --color-sidebar-bg: #000000;
     --sidebar-item-hover: #38a169;
     --sidebar-item-active: #276749;

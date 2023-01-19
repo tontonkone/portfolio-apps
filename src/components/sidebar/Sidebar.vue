@@ -2,10 +2,12 @@
 <template>
     <div class="sidebar" :style="{ width: computedSideBarWidth }">
         <div>
-            <span v-if="collapsed">
-                <div class="logo-small"><img src="@/assets/img/LogoBas.png" alt="logo" ></div>
-            </span>
-            <span v-else class="logo-big"><img src="@/assets/img/LogoBas.png" alt="logo"></span>
+            <div v-if="collapsed">
+                <div class="logo-small"><img src="@/assets/img/LogoBas.png" alt="logo" >
+                </div>
+            </div>
+            <div v-else class="logo-big"><img src="@/assets/img/LogoBas.png" alt="logo">
+            </div>
         </div>
 
         <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink>
@@ -58,6 +60,7 @@ export default {
     .logo-small{
         img{
             width: 50px;
+            margin-bottom: 6rem;
             transition: width 2s, height 2s;
         }
 

@@ -48,27 +48,19 @@ export default {
 </script> 
 
 <style lang="scss" scoped>
+@import '../../assets/scss/mixin';
 .home {
+ 
+  @include displayFlex();
   background-image: var(--image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  width: 100%;
-  height: 100%;
-  
-  display: flex;
-  flex-direction: row;
+  overflow-y: hidden;
 
   svg{
     height: auto;
   }
   &__text{
     flex: 1;
-    text-align: left;
-
-    margin-left: 13rem;
-    margin-top: 15rem;
+    @include positionLeft();
 
   }
   h1 span{
@@ -77,7 +69,7 @@ export default {
   &__logobig{
     flex: 1;
     margin: 0;
-     padding: 0px;
+    padding: 0px;
   }
 
   img {

@@ -1,40 +1,35 @@
 <template>
   <div class="contact">
-
-    <div class="contact">
-      <div class="contact__img">
-        <LogoContact/>     
+    <div class="contact__img" :class="{ 'move-text': collapsed }">
+      <h1>
+        <LetterAnime :classl="classl" :char="title" :idx=1 />
+      </h1>
+      <LogoContact />
     </div>
-      <div class="contact__info">
-        <h1>
-          <LetterAnime :classl="classl" :char="title" :idx=1 />
-        </h1>
-       <div class="text-center">
-          <div>
-
-            <input type="text" name="user_name" v-model="name" placeholder="name"/>
-          </div>
-
-          <div>
-            <input type="email" name="user_email" v-model="email" placeholder="email"/>
-          </div>
-
-          <div>
-            <textarea name="message" v-model="text" placeholder="message" ></textarea>
-          </div>
-
-          <button @click.prevent="sendEmail">
-            Envoyer
-          </button>
-        </div>
-
-        <Snackbar 
-          :showSnackbar="showSnackbar" 
-          @close="closeSnackbar" 
-          :snackbarMessage="snackbarMessage"
-          :snackbarColor="snackbarColor" />
+    <div class="contact__info">
+      <div class="contact__text">
+        <h2>Envoyer moi un message</h2>
+        <p> Vous pouvez me contacter par mail: <br/>
+          Konemamoudou84@gmail.com
+        </p>
       </div>
+      <label>
+        <input type="text" name="user_name" v-model="name" placeholder="name" />
+      </label>
 
+      <label>
+        <input type="email" name="user_email" v-model="email" placeholder="email" />
+      </label>
+
+      <label>
+        <textarea  rows="10" cols="33" name="message" v-model="text" placeholder="message..."></textarea>
+      </label>
+
+      <button  class="btn" @click.prevent="sendEmail">
+        Envoyer
+      </button>
+      <Snackbar :showSnackbar="showSnackbar" @close="closeSnackbar" :snackbarMessage="snackbarMessage"
+        :snackbarColor="snackbarColor" />
     </div>
   </div>
 </template>
@@ -44,13 +39,14 @@ import Snackbar from '@/components/help/Snackbar.vue';
 import config from '@/config.js'
 import LogoContact from '../../components/logo/LogoContact.vue';
 import LetterAnime from '@/components/letter/LetterAnime.vue';
+import { collapsed } from '@/components/sidebar/state';
 
 export default {
   name: "Contact",
   components: {
     Snackbar,
     LogoContact,
-    LetterAnime
+    LetterAnime,
   },
   props: {
     nightMode: {
@@ -65,8 +61,9 @@ export default {
       showSnackbar: false,
       snackbarMessage: "",
       snackbarColor: "",
-      classl:'text-animate',
-      title: 'Contact'
+      classl: 'text-animate',
+      title: 'Contact',
+      collapsed
     };
   },
   methods: {
@@ -120,26 +117,52 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/mixin';
+
+*:focus {
+  outline: none;
+}
 .contact {
-  display: flex;
-  flex-direction: row;
+
+  @include displayFlex();
   background-image: var(--image-sb);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
+
+  transition: 0.3s all ease-in-out;
+
+  &__text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 2rem;
+  }
+
+  input,
+  textarea {
+
+    display: block;
+    width: 80%;
+    background: transparent;
+    padding: 1.2rem;
+    margin: .5rem;
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.33);
+
+    border: none;
+    resize: vertical;
+
+    &:focus{
+      border: 2px solid rgb(255, 128, 0);
+    }
+  }
 
   svg {
     height: auto;
   }
 
   &__info {
-    text-align: left;
-    margin-top: 10rem;
-    margin-left: 13rem;
-    flex: .5;
-
+    margin: auto;
+    flex: 1;
+    padding: 1rem;
+    
     p {
       color: rgb(19, 19, 9);
     }
@@ -147,7 +170,8 @@ export default {
 
   &__img {
     flex: 1;
-    padding: 10rem 2rem 0 0;
+    @include positionLeft();
+
   }
 
   .move-text {

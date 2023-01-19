@@ -1,0 +1,17 @@
+@mixin positionLeft() {
+    text-align: left;
+    margin-top: 10rem;
+    margin-left: 13rem;
+}
+
+@mixin displayFlex() {
+    display: flex;
+    flex-direction: row;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    width: 100%;
+    height: 100vh;
+}

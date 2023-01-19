@@ -10,28 +10,35 @@ export default {
 }
 </script>
 <style lang="scss" >
-@import './assets/scss/_variable.scss';
+@import './assets/scss/variable.scss';
 @import './assets/scss/noramlize';
+@import './assets/scss/mixin';
 
 span{
   margin: 0px;
 }
 
 #app {
+  
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  
+  text-align: center;  
 }
 .move{
   margin-left: 100px;
 }
+label{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
 
 body{
-  background: #ffffff;
-  overflow-y: none;
+  background: var(--image-haut);
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 h1 {

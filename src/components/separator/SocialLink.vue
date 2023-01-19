@@ -25,10 +25,11 @@ export default {
 .icon {
     font-size: 2rem;
     margin: .5rem;
-    color: orangered;
+    color: var(--color-bg-btn);
+
     &:hover{
         transform: scale(1.2);
-        color: yellow;
+        color: var(--color-hover-bg);
     }
 }
 

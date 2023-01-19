@@ -35,11 +35,10 @@ export default {
     min-width: 10px;
     display: inline-block;
     animation-fill-mode: both;
-    cursor: none;
 
     &:hover {
         animation: rubberBand 1s;
-        color: #FE5D26;
+        color:var(--color-hover-h1);
     }
 }
 
@@ -50,21 +49,4 @@ export default {
     }
 }
 
-.contact ul {
-    padding: 0;
-}
-
-span {
-    margin: 1px;
-}
-
-.contact li {
-    list-style-type: none;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    line-height: 1.5em;
-}
 </style>
