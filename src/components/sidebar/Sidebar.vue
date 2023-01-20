@@ -3,10 +3,10 @@
     <div class="sidebar" :style="{ width: computedSideBarWidth }">
         <div>
             <div v-if="collapsed">
-                <div class="logo-small"><img src="@/assets/img/LogoBas.png" alt="logo" >
+                <div class="logo-small"><img src="@/assets/img/logo/LogoBas.png" alt="logo" >
                 </div>
             </div>
-            <div v-else class="logo-big"><img src="@/assets/img/LogoBas.png" alt="logo">
+            <div v-else class="logo-big"><img src="@/assets/img/logo/LogoBas.png" alt="logo">
             </div>
         </div>
 
@@ -73,8 +73,8 @@ export default {
     .collapse-icon {
         position: absolute;
         top: 30rem;
-        color: #FFD3A0;
-        
+        color:var(--color-sidebar-icon-bg);
+        cursor: pointer;
         font-size: x-large;
 
         transition: 0.2s linear;

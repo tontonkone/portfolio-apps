@@ -14,11 +14,6 @@
                         <img :src="lang.link" :alt="lang.name">
                     </li>
                 </ul>
-<!--                 <ul>
-                    <li v-for="lib in libs" :key="lib.name">
-                        <img :src="lib.link" :alt="lib.name">
-                    </li>
-                </ul> -->
         </div>
     </div>
 </template>
@@ -106,7 +101,7 @@ export default {
             
                 &:hover {
                     transform: scale(1.1);
-                    background: rgb(255, 255, 255);
+                    background: var(--color-bg-fond);
                     box-shadow: 0 0 40px rgba(0, 0, 0, 0.33);
                 }
                 img {

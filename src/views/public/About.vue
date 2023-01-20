@@ -18,8 +18,7 @@
                 <ButtonDownload />
         </div>
         <div class="about__img">
-            <!-- <img src="@/assets/img/profil-c.svg" alt="photo de profils"> -->
-            <LogoAboout/>
+            <LogoAbout/>
         </div>
     </div>
 </template>
@@ -28,12 +27,12 @@
 import { ref } from 'vue';
 import ButtonDownload from '@/components/button/ButtonDownload.vue';
 import { collapsed } from '@/components/sidebar/state';
-import LogoAboout from '@/components/logo/LogoAboout.vue';
+import LogoAbout from '@/components/logo/LogoAbout.vue';
 import LetterAnime from '@/components/letter/LetterAnime.vue';
 
 
 export default {
-    components: { LetterAnime, ButtonDownload,LogoAboout },
+    components: { LetterAnime, ButtonDownload,LogoAbout },
     setup() {
         const classl = ref('text-animate')
         const title = ref([... 'About'])
@@ -67,7 +66,7 @@ body{
         flex: .5;
 
         p {
-            color: rgb(19, 19, 9);
+            color:var(--color-text);
         }
     }
     &__img {

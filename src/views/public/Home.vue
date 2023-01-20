@@ -5,7 +5,7 @@
       <h1>
         <LetterAnime :classl="classl" :char="present" :idx=1 />
         <br>
-        <img src="@/assets/img/logomini.png" alt="logo">
+        <img src="@/assets/img/logo/logomini.png" alt="logo">
         <LetterAnime :classl="classl" :char="char" :idx=6 />
         <br />
         <LetterAnime :classl="classl" :char="jobchar" :idx=12 />
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { ref, watchEffect } from 'vue'
+import { ref, watchEffect} from 'vue'
 import LetterAnime from '@/components/letter/LetterAnime.vue'
 import LogoAnime from '@/components/logo/LogoAnime.vue'
 import ButtonLink from '@/components/button/ButtonLink.vue'
@@ -34,9 +34,8 @@ export default {
   setup() {
     const classl = ref('text-animate')
     const present = ref([... 'Je suis'])
-    const jobchar = ref([... 'developpeur web junior'])
+    const jobchar = ref([... 'devéloppeur web junior'])
     const char = ref([... 'one mamoudou'])
-
 
     watchEffect(() => setTimeout(() => {
       classl.value = "text-animate-hover"

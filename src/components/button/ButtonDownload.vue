@@ -11,7 +11,7 @@ export default {
 
          const onClick = function() {
             axios({
-                url: require('@/assets/img/logomini.png'),
+                url: require('@/assets/img/logo/logomini.png'),
                 method: 'GET',
                 responseType: 'blob',
             }).then((response) => {

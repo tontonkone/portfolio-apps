@@ -12,7 +12,7 @@
                     <img  :src="project.pictures" :alt="project.name">
                 </div>        
                 <div class="portfolio__desc" >
-                    <span>{{ project.name }}</span>
+                    <p>{{ project.name }}</p>
                     <p class="text">
                         {{ project.description }}
                     </p>
@@ -42,7 +42,7 @@ export default {
             {
                 name: "site d'échanges ",
                 description: "Une application d'échange  autour du devéloppement ",
-                pictures: require ('@/assets/img/port.jpg'),
+                pictures: require('@/assets/img/divers/port.jpg'),
                 technos: ["PHP", "javaScript", "html", "sass"],
                 githubLink: "https://github.com",
                 liveView: "https://ns-food-ecommerce.netlify.app"
@@ -50,14 +50,14 @@ export default {
             {
                 name: "Mon Portfolio",
                 description: "Mon portfolio personnel.",
-                pictures: require('@/assets/img/port.jpg'),
+                pictures: require('@/assets/img/divers/port.jpg'),
                 technos: ["VueJS", "sass"],
                 githubLink: "https://github.com/",
                 liveView: "/"
             }, {
                 name: "Mon Portfolio",
                 description: "Mon portfolio personnel.",
-                pictures: require('@/assets/img/port.jpg'),
+                pictures: require('@/assets/img/divers/port.jpg'),
                 technos: ["VueJS", "sass"],
                 githubLink: "https://github.com/",
                 liveView: "/"
@@ -85,11 +85,9 @@ body{
 }
 .portfolio {
     &__content {
-        margin: 5rem;
+        margin-left: 13rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-
-        @include positionLeft();
     
     }
 
@@ -98,7 +96,7 @@ body{
         flex-direction: column;
         align-items: flex-start;
         max-width: 400px;
-        margin: .3rem;
+        margin: .8rem;
         padding: 1rem;
         box-shadow: 0 0 22px rgba(0, 0, 0, 0.33);
 
@@ -129,8 +127,18 @@ body{
     }
     .icon{
         font-size: 2rem;
-        color: orangered;
+        color:var(--color-bg-btn);
         margin: .3rem;
+        &:hover{
+            color:var(--color-hover-border-btn);
+        }
+    }
+    h2{
+        color: var();
+    }
+    p{
+        color:var(--color-text);
+        font-size: 1.3rem;
     }
     .move-text {
         margin-left: 100px;

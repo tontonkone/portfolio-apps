@@ -10,7 +10,8 @@
       <div class="contact__text">
         <h2>Envoyer moi un message</h2>
         <p> Vous pouvez me contacter par mail: <br/>
-          Konemamoudou84@gmail.com
+          
+          <a href="mailto:konemamoudou@gmail.com">Konemamoudou84@gmail.com</a>
         </p>
       </div>
       <label>
@@ -136,6 +137,7 @@ export default {
     margin-left: 2rem;
   }
 
+
   input,
   textarea {
 
@@ -162,9 +164,13 @@ export default {
     margin: auto;
     flex: 1;
     padding: 1rem;
+
+    h2{
+      color: var(--color-link);
+    }
     
     p {
-      color: rgb(19, 19, 9);
+      color: var(--color-text);
     }
   }
 
@@ -176,6 +182,12 @@ export default {
 
   .move-text {
     margin-left: 100px;
+  }
+
+  a {
+    line-height: var(--line-height);
+    color: var(--color-link);
+    text-decoration: none;
   }
 }
 </style>

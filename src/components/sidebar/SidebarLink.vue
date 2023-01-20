@@ -52,8 +52,7 @@ export default {
     padding: 0.4em;
     border-radius: 0.25em;
     height: 1.5em;
-    color: white;
-    /**changer */
+    color:var(--color-sidebar-icon-bg);
     text-decoration: none;
 }
 

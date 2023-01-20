@@ -30,7 +30,7 @@ FFD3A0
     --color-red:#822003;
     --color-sep:#555;
 
-
+    /* Text */
     --size-text: 1.5rem;
     --size-title-1: 3.6rem;
     --size-title-2: 3.6rem;
@@ -38,11 +38,16 @@ FFD3A0
 
     --line-height: 2.0rem;
 
-    --color-sidebar-bg: #2e2b2b;
-    --sidebar-item-hover: #38a169;
-    --sidebar-item-active: #276749;
-    --color-menu-link: #0c6588;
+    /* sidebar */
 
+    --sidebar-test-bg:#fcd4a4;
+    --color-sidebar-bg: #2e2b2b;
+    --sidebar-item-hover: #664c03;
+    --sidebar-item-active: #CC980C;
+    --color-sidebar-icon: #FFD3A0;
+    --color-sidebar-icon-bg:#feffe5;
+    
+    /* btn*/
     --color-bg-btn: #FF4600;
     --color-hover:#555;
     --color-border-btn:#ff4600;
@@ -50,14 +55,17 @@ FFD3A0
     --color-hover-border-btn:#CC980C;
     --color-hover-btn:#ff4600;
 
+    /* Color text */
 
     --color-h1:#ff4600;
+    --color-h2: #333;
     --color-hover-h1:#CC980C; 
     --color-title: #333;
-    --color-text: #555;
+    --color-text: #333;
     --color-link: #0c6588;
     --color-link-hover: #111;
     --color-menu: #e2f7ff;
+    --color-link:#FF4600;
 
     --border-sm: 1px solid #eee;
     --border-md: 1px solid #ddd;
@@ -69,21 +77,23 @@ THEMES / OPTIONS
 ***************************************************************** */
 
 [data-mode="dark"] {
-    --image: url('./assets/img/fonds/fondhaut.png');
-    --image-s: url('./assets/img/fonds/fondbas.png');
-    --image-sb: url('./assets/img/fonds/fondsbot.png');
+    --image: url('./assets/img/fonds/fondhautdark.png');
+    --image-s: url('./assets/img/fonds/fondsbasdark.png');
+    --image-sb: url('./assets/img/fonds/fondsbottom.png');
 
+    --color-bg-fond: transparent;
     --color-sidebar-bg: #000000;
-    --sidebar-item-hover: #38a169;
-    --sidebar-item-active: #276749;
-    --color-menu-link: #0c6588;
+    --sidebar-item-hover: #664c03;
+    --sidebar-item-active: #CC980C;
+    --color-sidebar-icon: #FFD3A0;
+    --color-sidebar-icon-bg: #feffe5;
 
     --color-bg-body: #eee;
     --color-bg-main: #fff;
 
     --color-title: #333;
     --color-text: #555;
-    --color-link: #0c6588;
+    --color-link: #FFD3A0;
     --color-link-hover: #111;
     --color-menu: #e2f7ff;
 

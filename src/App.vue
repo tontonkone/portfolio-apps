@@ -1,12 +1,14 @@
 <template>
   <Sidebar />
+  <Dark/>
   <router-view/>
 </template>
 
 <script>
-import Sidebar from '@/components/sidebar/Sidebar.vue'
+import Sidebar from '@/components/sidebar/Sidebar.vue';
+import Dark from '@/components/help/Dark.vue';
 export default {
-  components: { Sidebar },
+  components: { Sidebar,Dark },
 }
 </script>
 <style lang="scss" >
