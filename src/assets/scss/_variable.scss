@@ -1,16 +1,12 @@
+
+$desktop-breakpoint: 1200px;
+$tablet-breakpoint: 992px;
+$mobile-breakpoint: 768px;
+
+
+
 :root {
 
-/* 
-#FFBA08 orange
-#FE5D26 
-#7EBC89
-#222823 vert 
-#7B0D1E
-#7C6A0A
-442500
-212119
-FFD3A0
-*/
     --image: url('./assets/img/fonds/fondhaut.png');
     --image-s: url('./assets/img/fonds/fondbas.png');
     --image-sb: url('./assets/img/fonds/fondsbot.png');
@@ -87,6 +83,13 @@ THEMES / OPTIONS
     --sidebar-item-active: #CC980C;
     --color-sidebar-icon: #FFD3A0;
     --color-sidebar-icon-bg: #feffe5;
+/* btn*/
+    --color-bg-btn: #CC980C;
+    --color-hover: #555;
+    --color-border-btn: #CC980C;
+    --color-hover-bg: #ff4600;
+    --color-hover-border-btn: #ff4600;
+    --color-hover-btn: #CC980C;
 
     --color-bg-body: #eee;
     --color-bg-main: #fff;

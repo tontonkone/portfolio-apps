@@ -1,7 +1,7 @@
 <template>
 
     <div class="about">
-        <div class="about__info" :class="{ 'move-text': collapsed }">
+        <div class="about__info" >
             <h1>
                 <LetterAnime :classl="classl" :char="title" :idx=1 />
             </h1>
@@ -26,7 +26,6 @@
 <script>
 import { ref } from 'vue';
 import ButtonDownload from '@/components/button/ButtonDownload.vue';
-import { collapsed } from '@/components/sidebar/state';
 import LogoAbout from '@/components/logo/LogoAbout.vue';
 import LetterAnime from '@/components/letter/LetterAnime.vue';
 
@@ -36,25 +35,20 @@ export default {
     setup() {
         const classl = ref('text-animate')
         const title = ref([... 'About'])
-        return {collapsed, title,classl}
+        return {title,classl}
     }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../../assets/scss/mixin';
-body{
-    background-image: var(--image-s);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 
-    width: 100%;
-    height: 100vh;
-}
 .about {
 
-    display: flex;
+    padding-top: 10rem;
+
+    background-image: var(--image-s);
+    @include displayFlex();
 
 
     svg{
@@ -71,10 +65,39 @@ body{
     }
     &__img {
         flex: 1;
-        padding: 10rem 2rem 0 0;
+        margin: 0 2rem 0 0;
     }
-    .move-text {
-        margin-left: 100px;
+
+}
+
+@media only screen and (max-width: 992px) {
+
+
+    svg {
+        height: 100vh;
+        width: 100%;
     }
+
+    .about{
+        overflow: scroll;
+        padding-top: 2rem;
+
+        height: 100vh;
+
+        @include mobileDisplay();
+
+        &__info {
+
+            margin-top: 2rem;
+            margin-left: 70px;
+        }
+
+        &__img {
+
+            margin-top: 2rem;
+            margin-left: 70px;
+        }
+    }
+
 }
 </style>

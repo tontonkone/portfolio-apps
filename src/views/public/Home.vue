@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!--Text container -->    
-    <div class="home__text" :class="{ 'move-text': collapsed }">
+    <div class="home__text">
       <h1>
         <LetterAnime :classl="classl" :char="present" :idx=1 />
         <br>
@@ -19,6 +19,7 @@
     </div>
  
   </div>
+
 </template>
 
 <script>
@@ -27,7 +28,6 @@ import LetterAnime from '@/components/letter/LetterAnime.vue'
 import LogoAnime from '@/components/logo/LogoAnime.vue'
 import ButtonLink from '@/components/button/ButtonLink.vue'
 import Separator from '@/components/separator/Separator.vue'
-import {collapsed} from '@/components/sidebar/state'
 
 export default {
   components: {LetterAnime, LogoAnime, ButtonLink, Separator },
@@ -41,7 +41,7 @@ export default {
       classl.value = "text-animate-hover"
     }, 3000))
     
-    return { classl, jobchar, char, present, collapsed}
+    return { classl, jobchar, char, present}
   }
 }
 </script> 
@@ -49,6 +49,7 @@ export default {
 <style lang="scss" scoped>
 @import '../../assets/scss/mixin';
 .home {
+  padding-top: 10rem;
  
   @include displayFlex();
   background-image: var(--image);
@@ -57,18 +58,21 @@ export default {
   svg{
     height: auto;
   }
+
   &__text{
     flex: 1;
     @include positionLeft();
 
   }
+
   h1 span{
     margin: 0;
   }
+  
   &__logobig{
     flex: 1;
-    margin: 0;
     padding: 0px;
+    visibility: visible;
   }
 
   img {
@@ -81,7 +85,36 @@ export default {
     margin-left: -7px;
   }
 }
-.move-text {
-    margin-left: 100px;
+
+@media only screen and (max-width: 992px ){
+
+
+  h1{
+    font-size: 2rem;
   }
+  svg{
+    height: 100vh;
+    width: 100%;
+  }
+
+  .home{
+
+    padding-top: 2rem;
+
+    @include mobileDisplay();
+
+    overflow:scroll;
+
+    &__text{
+
+      margin-left: 70px;
+    }
+    &__logobig{
+      margin-left: 70px;
+      margin-bottom: 3rem;
+
+    }
+  }
+
+}
 </style>

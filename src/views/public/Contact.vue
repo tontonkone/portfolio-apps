@@ -11,7 +11,7 @@
         <h2>Envoyer moi un message</h2>
         <p> Vous pouvez me contacter par mail: <br/>
           
-          <a href="mailto:konemamoudou@gmail.com">Konemamoudou84@gmail.com</a>
+          <a href="mailto:konemamoudou@gmail.com">👉 Konemamoudou84@gmail.com</a>
         </p>
       </div>
       <label>
@@ -125,10 +125,13 @@ export default {
 }
 .contact {
 
+  padding-top: 10rem;
   @include displayFlex();
   background-image: var(--image-sb);
 
   transition: 0.3s all ease-in-out;
+
+
 
   &__text{
     display: flex;
@@ -161,7 +164,7 @@ export default {
   }
 
   &__info {
-    margin: auto;
+    margin: 1rem 0 2rem 3rem;
     flex: 1;
     padding: 1rem;
 
@@ -179,15 +182,31 @@ export default {
     @include positionLeft();
 
   }
-
-  .move-text {
-    margin-left: 100px;
-  }
-
   a {
     line-height: var(--line-height);
     color: var(--color-link);
     text-decoration: none;
   }
+}
+
+@media only screen and (max-width: 992px) {
+
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .contact {
+    padding-top: 2rem;
+    overflow: scroll;
+    @include mobileDisplay();
+
+
+    &__img{
+
+        padding-right: 2rem;
+    }
+  }
+
 }
 </style>

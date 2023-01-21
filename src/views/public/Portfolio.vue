@@ -1,12 +1,12 @@
 <template>
 
     <div class="portfolio">
-        <div class="portfolio__title" :class="{ 'move-text': collapsed }">
+        <div class="portfolio__title" >
             <h1>
                 <LetterAnime :classl="classl" :char="title" :idx=1 />
             </h1>
         </div>
-        <div class="portfolio__content" :class="{ 'move-text': collapsed }">
+        <div class="portfolio__content" >
             <div class="portfolio__project" v-for="(project, index) in projects" :key="index">
                 <div class="portfolio__project--img">
                     <img  :src="project.pictures" :alt="project.name">
@@ -15,6 +15,11 @@
                     <p>{{ project.name }}</p>
                     <p class="text">
                         {{ project.description }}
+                    </p>
+                </div>
+                <div class="langs">
+                    <p v-for="(techno, index) of project.technos" :key="index">
+                            {{ techno }}
                     </p>
                 </div>
                 <div class="icon--project">
@@ -42,22 +47,15 @@ export default {
             {
                 name: "site d'échanges ",
                 description: "Une application d'échange  autour du devéloppement ",
-                pictures: require('@/assets/img/divers/port.jpg'),
-                technos: ["PHP", "javaScript", "html", "sass"],
+                pictures: require('@/assets/img/divers/fwc.jpg'),
+                technos: ["PHP", "JS", "Sass"],
                 githubLink: "https://github.com",
-                liveView: "https://ns-food-ecommerce.netlify.app"
+                liveView: "https://mamoudoukone.sites.3wa.io/projet3wa/public/index.php?page=register"
             },
             {
                 name: "Mon Portfolio",
                 description: "Mon portfolio personnel.",
-                pictures: require('@/assets/img/divers/port.jpg'),
-                technos: ["VueJS", "sass"],
-                githubLink: "https://github.com/",
-                liveView: "/"
-            }, {
-                name: "Mon Portfolio",
-                description: "Mon portfolio personnel.",
-                pictures: require('@/assets/img/divers/port.jpg'),
+                pictures: require('@/assets/img/divers/portf.jpg'),
                 technos: ["VueJS", "sass"],
                 githubLink: "https://github.com/",
                 liveView: "/"
@@ -66,26 +64,29 @@ export default {
         const title = [...'Portfolio'];
         const classl = ref('text-animate')
 
-        return { title, classl, collapsed, projects }
+        return { title, classl, projects }
     }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../assets/scss/mixin';
 
-body{
+
+.portfolio {
+    padding-top: 10rem;
+
     background-image: var(--image-s);
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
     width: 100%;
     height: 100vh;
-}
-.portfolio {
+    
     &__content {
-        margin-left: 13rem;
+        margin-left: 50px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     
@@ -140,8 +141,38 @@ body{
         color:var(--color-text);
         font-size: 1.3rem;
     }
-    .move-text {
-        margin-left: 100px;
+    .langs{
+        display: flex;
+        flex-direction: row;
+        P{
+            margin: .3rem;
+            color: var(--color-bg-btn);
+            padding: .2rem;
+            border-radius: .5rem;
+        }
+
     }
+
+}
+
+@media only screen and (max-width:758px) {
+
+    .portfolio {
+        overflow: scroll;
+        @include mobileDisplay();
+
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 2rem;
+        }
+
+        &__logobig {
+
+            margin-top: 2rem;
+            margin-left: 70px;
+        }
+    }
+
 }
 </style>

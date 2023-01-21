@@ -1,14 +1,15 @@
 <template>
   <Sidebar />
-  <Dark/>
+  <Dark/>  
   <router-view/>
 </template>
 
 <script>
 import Sidebar from '@/components/sidebar/Sidebar.vue';
 import Dark from '@/components/help/Dark.vue';
+
 export default {
-  components: { Sidebar,Dark },
+  components: { Sidebar,Dark},
 }
 </script>
 <style lang="scss" >
@@ -44,9 +45,9 @@ body{
 }
 
 h1 {
-  color: #ff3d08;
-  font-size: 50px;
-  line-height: 53px;
+  color:var(--color-h1);
+  font-size: 3rem;
+  line-height: 4rem;
   margin: 0;
   font-family: Coolvetica;
 }

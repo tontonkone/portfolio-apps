@@ -2,7 +2,7 @@
    
     <div class="skill">
         
-        <div class="skill__img" :class="{ 'move-text': collapsed }">
+        <div class="skill__img">
             <h1>
                 <LetterAnime :classl="classl" :char="title" :idx=1 />
             </h1>
@@ -46,7 +46,7 @@ export default {
             { name: 'logo css', link: require('@/assets/img/skill/css.svg') },
         ])
 
-        return { langs,classl,title,collapsed }
+        return { langs,classl,title }
     }
 }
 </script>
@@ -55,6 +55,7 @@ export default {
 @import '../../assets/scss/mixin';
 .skill{
 
+    padding-top: 10rem;
     @include displayFlex();
     background-image: var(--image);
     
@@ -65,7 +66,6 @@ export default {
     
     &__logosvg{
         flex: 1;
-        padding-top: 10rem;
         
         ul {
             display: flex;
@@ -87,8 +87,8 @@ export default {
                 width: 50%;
                 box-shadow: 0 0 16px rgba(0, 0, 0, 0.33);
 
-                max-width: 120px;
-                height: 122px;
+                max-width: 78px;
+                height: 80px;
 
                 margin: .2rem;
                 padding: 10px;
@@ -111,8 +111,39 @@ export default {
             }
         }
     }
-    .move-text {
-        margin-left: 100px;
+}
+
+@media only screen and (max-width: 992px) {
+
+
+    h1 {
+        font-size: 2rem;
     }
+
+    .skill {
+        padding-top: 3rem;
+        height: 100vh;
+
+        @include mobileDisplay();
+        overflow-y: scroll;
+
+        &__img {
+
+            margin-top: 2rem;
+            margin-left: 50px;
+            padding:0 2rem;
+        }
+
+        &__logosvg {
+
+            margin: 0 0 3rem 5rem;
+            padding: 0 1rem;
+
+            ul{
+                width:auto;
+            }
+        }
+    }
+
 }
 </style>

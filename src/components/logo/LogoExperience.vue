@@ -1,6 +1,5 @@
 <template>
-  <div class="logo__exp">
-<svg width="974" height="588" viewBox="0 0 974 588" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="530" height="370" viewBox="0 0 974 588" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_113_2)">
         <mask id="mask0_113_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="974"
             height="588">
@@ -117,7 +116,7 @@
 </svg>
 
 
-  </div>
+
 </template>
 
 <script>
