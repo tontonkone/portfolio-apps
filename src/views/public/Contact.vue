@@ -15,11 +15,11 @@
         </p>
       </div>
       <label>
-        <input type="text" name="user_name" v-model="name" placeholder="name" />
+        <input type="text" name="from_name" v-model="name" placeholder="name" />
       </label>
 
       <label>
-        <input type="email" name="user_email" v-model="email" placeholder="email" />
+        <input type="email" name="email" v-model="email" placeholder="email" />
       </label>
 
       <label>
@@ -82,9 +82,9 @@ export default {
         this.snackbarColor = "rgb(212, 149, 97)";
       } else {
         var obj = {
-          user_email: this.email,
+          email: this.email,
           from_name: this.name,
-          message_html: this.text,
+          message: this.text,
           to_name: "Natain Bogdan",
         };
 
@@ -153,7 +153,7 @@ export default {
 
     border: none;
     resize: vertical;
-
+    color: var(--color-text);
     &:focus{
       border: 2px solid rgb(255, 128, 0);
     }

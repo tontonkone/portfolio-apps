@@ -96,14 +96,15 @@ export default {
     height: 100vh;
     width: 100%;
   }
-
+  body{
+    overflow: scroll;
+  }
   .home{
 
     padding-top: 2rem;
 
     @include mobileDisplay();
 
-    overflow:scroll;
 
     &__text{
 

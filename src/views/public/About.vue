@@ -19,7 +19,7 @@
                 
                 J'apprends très vite et j'ai un esprit logique.
             </p>
-                <ButtonDownload />
+                <ButtonDownload/>
         </div>
         <div class="about__img">
             <LogoAbout/>
@@ -82,6 +82,7 @@ export default {
         width: 100%;
     }
 
+    
     .about{
         overflow: scroll;
         padding-top: 2rem;

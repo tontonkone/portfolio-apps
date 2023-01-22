@@ -10,6 +10,7 @@ $mobile-breakpoint: 768px;
     --image: url('./assets/img/fonds/fondhaut.png');
     --image-s: url('./assets/img/fonds/fondbas.png');
     --image-sb: url('./assets/img/fonds/fondsbot.png');
+    --bg: url('./assets/img/fonds/bgc.png');
     
     --color-bg-fond:#feffe5;
     --color-wh-black:#fff;
@@ -76,6 +77,7 @@ THEMES / OPTIONS
     --image: url('./assets/img/fonds/fondhautdark.png');
     --image-s: url('./assets/img/fonds/fondsbasdark.png');
     --image-sb: url('./assets/img/fonds/fondsbottom.png');
+    --bg: url('./assets/img/fonds/bg.png');
 
     --color-bg-fond: transparent;
     --color-sidebar-bg: #000000;
@@ -95,7 +97,7 @@ THEMES / OPTIONS
     --color-bg-main: #fff;
 
     --color-title: #333;
-    --color-text: #555;
+    --color-text: #ffd3a0;
     --color-link: #FFD3A0;
     --color-link-hover: #111;
     --color-menu: #e2f7ff;

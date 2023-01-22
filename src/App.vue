@@ -48,7 +48,7 @@ label{
 }
 
 body{
-  background: var(--image-haut);
+  background: var(--bg);
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -60,19 +60,12 @@ h1 {
   margin: 0;
   font-family: Coolvetica;
 }
-.route-enter-from {
-  opacity: 0.3;
-  transform: translateY(50px);
+.route-enter-from,.route-leave-to {
+  opacity: 0;
+  transform: translateX(2em);
 }
-.route-enter-active {
-  transition: ass .4s ease-out;
+.route-enter-active, .route-leave-active {
+  transition: all .5s ease;
 }
 
-.route-leave-to{
-  opacity: 0.3;
-  transform: translateY(-50px);
-}
-.route-leave-active {
-  transition: all .4s ease-in;
-}
 </style>

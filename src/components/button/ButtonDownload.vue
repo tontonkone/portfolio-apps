@@ -1,33 +1,16 @@
 <template>
-    <button  class="btn" @click="onClick()">Mon CV</button>
+    <button  class="btn"> <a :href="link" target="_blank">PDF</a></button>
 </template>
 
 <script>
-import axios from 'axios'
-import { onMounted } from 'vue'
+import {ref} from 'vue';
 export default {
 
     setup(props) {
 
-         const onClick = function() {
-            axios({
-                url: require('@/assets/img/logo/logomini.png'),
-                method: 'GET',
-                responseType: 'blob',
-            }).then((response) => {
-
-                var fileURL = window.URL.createObjectURL(new Blob([response.data]));
-                var fileLink = document.createElement('a');
-
-                fileLink.href = fileURL;
-                fileLink.setAttribute('download', 'image.jpg');
-
-                document.body.appendChild(fileLink);
-
-                fileLink.click();
-            });
-        }
-        return { onClick}
+        const link = 'https://drive.google.com/file/d/1WjjBF_hI1LCkRTl4KzTkNd_MT_P8wJ9v/view'
+        
+        return {link}
     }
 }
 </script>
