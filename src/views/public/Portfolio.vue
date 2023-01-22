@@ -1,17 +1,17 @@
 <template>
 
     <div class="portfolio">
-        <div class="portfolio__title" >
+        <div class="portfolio__title">
             <h1>
                 <LetterAnime :classl="classl" :char="title" :idx=1 />
             </h1>
         </div>
-        <div class="portfolio__content" >
+        <div class="portfolio__content">
             <div class="portfolio__project" v-for="(project, index) in projects" :key="index">
                 <div class="portfolio__project--img">
-                    <img  :src="project.pictures" :alt="project.name">
-                </div>        
-                <div class="portfolio__desc" >
+                    <img :src="project.pictures" :alt="project.name">
+                </div>
+                <div class="portfolio__desc">
                     <p>{{ project.name }}</p>
                     <p class="text">
                         {{ project.description }}
@@ -27,8 +27,7 @@
                         <i class="fab fa-github icon"></i>
                     </a>
                     <a :href="project.liveView" target="_blank">
-                        <i class="fab fa-github icon"></i>
-                    </a>
+                        <i class="fas fa-external-link icon"></i> </a>
                 </div>
             </div>
         </div>
@@ -46,23 +45,24 @@ export default {
         const projects = ref([
             {
                 name: "site d'échanges ",
-                description: "Une application d'échange  autour du devéloppement ",
+                description: "Site d'échange  autour du devéloppement ",
                 pictures: require('@/assets/img/divers/fwc.jpg'),
-                technos: { 
-                    php: { link: require('@/assets/img/skill/php.svg'),
-                            name:"php" 
-                            }, 
+                technos: {
+                    php: {
+                        link: require('@/assets/img/skill/php.svg'),
+                        name: "php"
+                    },
                     js: {
                         link: require('@/assets/img/skill/js.svg'),
-                        name: "js" 
-                        },
+                        name: "js"
+                    },
                     sass: {
                         link: require('@/assets/img/skill/sass.svg'),
                         name: "sass"
-                    }                  
+                    }
 
-                    },
-                githubLink: "https://github.com",
+                },
+                githubLink: "https://github.com/tontonkone/project3wa",
                 liveView: "https://mamoudoukone.sites.3wa.io/projet3wa/public/index.php?page=register"
             },
             {
@@ -80,7 +80,7 @@ export default {
                     }
 
                 },
-                githubLink: "https://github.com/",
+                githubLink: "https://github.com/tontonkone/portfolio-apps",
                 liveView: "/"
             }
         ])
@@ -107,15 +107,15 @@ export default {
 
     width: 100%;
     height: 100vh;
-    
+
     &__content {
         margin-left: 50px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-    
+
     }
 
-    &__project{
+    &__project {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -124,52 +124,62 @@ export default {
         padding: 1rem;
         box-shadow: 0 0 22px rgba(0, 0, 0, 0.33);
 
-        &--img{
+        &--img {
             object-fit: fill;
-            img{
-                width:100%;
-            }           
+
+            img {
+                width: 100%;
+            }
         }
-        &:hover{
+
+        &:hover {
             box-shadow: 0 0 44px rgba(0, 0, 0, 0.33);
             transform: scale(1.1);
         }
     }
-    &__desc{
+
+    &__desc {
         display: flex;
         flex-direction: column;
         text-align: left;
-        
+
     }
 
     &__title {
         @include positionLeft();
     }
-    .icon--project{
+
+    .icon--project {
         display: flex;
         flex-direction: row;
     }
-    .icon{
+
+    .icon {
         font-size: 2rem;
-        color:var(--color-bg-btn);
+        color: var(--color-bg-btn);
         margin: .3rem;
-        &:hover{
-            color:var(--color-hover-border-btn);
+
+        &:hover {
+            color: var(--color-hover-border-btn);
         }
     }
-    h2{
+
+    h2 {
         color: var();
     }
-    p{
-        color:var(--color-text);
+
+    p {
+        color: var(--color-text);
         font-size: 1.3rem;
     }
-    .langs{
+
+    .langs {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        img{
+
+        img {
             margin: .3rem;
             width: 3rem;
         }
