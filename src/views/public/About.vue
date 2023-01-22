@@ -5,16 +5,20 @@
             <h1>
                 <LetterAnime :classl="classl" :char="title" :idx=1 />
             </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aperiam officia possimus delectus
-                inventore quod
-                quisquam culpa voluptas iusto, quae maiores quo dolorum, corporis laboriosam a dolore consequatur
-                assumenda
-                nam!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aperiam officia possimus delectus
-                inventore quod
-                quisquam culpa voluptas iusto, quae maiores quo dolorum, corporis laboriosam a dolore consequatur
-                assumenda
-                nam!</p>
+            <p>Bonjour, je suis Kone j'ai découvert la programmation en usinage. J'y ai pris gout j'ai donc décidé de me reconvertir
+                pour faire du développement mon métier.
+                Ensuite, j'ai suivi une formation de 6 mois chez la 3wa.<br/> 
+                <strong>Ce que je recherche :</strong><br/>
+                un contrat de professionnalisation <br/>
+                un poste développeur web junior. <br/>
+            </p>
+
+            <p> <strong>Ce que je peux vous apporter:</strong><br/>
+                Je suis très autonome, débrouillard ce qui me permet de réagir et de trouver des solutions aux aléas rencontrés.<br/>
+                J'ai une bonne aisance relationnelle, et je suis un moteur positif au sein d'une équipe.<br/>
+                
+                J'apprends très vite et j'ai un esprit logique.
+            </p>
                 <ButtonDownload />
         </div>
         <div class="about__img">

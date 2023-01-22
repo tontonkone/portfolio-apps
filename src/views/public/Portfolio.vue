@@ -18,9 +18,9 @@
                     </p>
                 </div>
                 <div class="langs">
-                    <p v-for="(techno, index) of project.technos" :key="index">
-                            {{ techno }}
-                    </p>
+                    <div class="language" v-for="(techno, index) of project.technos" :key="index">
+                        <img :src="techno.link" :alt="techno.name">
+                    </div>
                 </div>
                 <div class="icon--project">
                     <a :href="project.githubLink" target="_blank">
@@ -48,7 +48,20 @@ export default {
                 name: "site d'échanges ",
                 description: "Une application d'échange  autour du devéloppement ",
                 pictures: require('@/assets/img/divers/fwc.jpg'),
-                technos: ["PHP", "JS", "Sass"],
+                technos: { 
+                    php: { link: require('@/assets/img/skill/php.svg'),
+                            name:"php" 
+                            }, 
+                    js: {
+                        link: require('@/assets/img/skill/js.svg'),
+                        name: "js" 
+                        },
+                    sass: {
+                        link: require('@/assets/img/skill/sass.svg'),
+                        name: "sass"
+                    }                  
+
+                    },
                 githubLink: "https://github.com",
                 liveView: "https://mamoudoukone.sites.3wa.io/projet3wa/public/index.php?page=register"
             },
@@ -56,7 +69,17 @@ export default {
                 name: "Mon Portfolio",
                 description: "Mon portfolio personnel.",
                 pictures: require('@/assets/img/divers/portf.jpg'),
-                technos: ["VueJS", "sass"],
+                technos: {
+                    vuejs: {
+                        link: require('@/assets/img/skill/vue.svg'),
+                        name: "php"
+                    },
+                    sass: {
+                        link: require('@/assets/img/skill/sass.svg'),
+                        name: "sass"
+                    }
+
+                },
                 githubLink: "https://github.com/",
                 liveView: "/"
             }
@@ -143,12 +166,12 @@ export default {
     }
     .langs{
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
-        P{
+        img{
             margin: .3rem;
-            color: var(--color-bg-btn);
-            padding: .2rem;
-            border-radius: .5rem;
+            width: 3rem;
         }
 
     }

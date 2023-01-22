@@ -1,7 +1,16 @@
 <template>
   <Sidebar />
   <Dark/>  
-  <router-view/>
+  <transition>
+    <router-view v-slot="{Component}">
+      <transition name="route" mode="out-in">
+        <component :is="Component"> </component>
+      
+      </transition>
+
+    </router-view>
+  </transition>
+
 </template>
 
 <script>
@@ -50,5 +59,20 @@ h1 {
   line-height: 4rem;
   margin: 0;
   font-family: Coolvetica;
+}
+.route-enter-from {
+  opacity: 0.3;
+  transform: translateY(50px);
+}
+.route-enter-active {
+  transition: ass .4s ease-out;
+}
+
+.route-leave-to{
+  opacity: 0.3;
+  transform: translateY(-50px);
+}
+.route-leave-active {
+  transition: all .4s ease-in;
 }
 </style>

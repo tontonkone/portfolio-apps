@@ -33,10 +33,15 @@ export default {
 
         const langs = ref([
             { name: 'logo php', link: require('@/assets/img/skill/php.svg') },
-            { name: 'logo html', link: require('@/assets/img/skill/html.svg') },
+            { name: 'logo html', link: require('@/assets/img/skill/js.svg') },
             { name: 'logo vue', link: require('@/assets/img/skill/vue.svg') },
             { name: 'logo css', link: require('@/assets/img/skill/css.svg') },
-            { name: 'logo symfony', link: require('@/assets/img/skill/symfony.svg') }
+            { name: 'logo symfony', link: require('@/assets/img/skill/symfony.svg') },
+            { name: 'logo symfony', link: require('@/assets/img/skill/html.svg') },
+            { name: 'logo symfony', link: require('@/assets/img/skill/mysql.svg') },
+            { name: 'logo symfony', link: require('@/assets/img/skill/sass.svg') },
+            { name: 'logo symfony', link: require('@/assets/img/skill/wp.svg') },
+
         ])
 
         const libs = ref([
