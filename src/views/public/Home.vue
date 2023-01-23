@@ -85,26 +85,36 @@ export default {
     margin-left: -7px;
   }
 }
+@media only screen and (max-width: 1050px) {
 
-@media only screen and (max-width: 992px ){
+  .home {
+    overflow: scroll !important;
+    padding-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 758px ){
 
 
   h1{
-    font-size: 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   svg{
     height: 100vh;
     width: 100%;
   }
-  body{
-    overflow: scroll;
-  }
+
   .home{
+    overflow: scroll;
 
     padding-top: 2rem;
 
     @include mobileDisplay();
 
+    img{
+      width: 50px;
+    }
 
     &__text{
 

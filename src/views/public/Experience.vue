@@ -117,16 +117,17 @@ export default {
         }
     }
 }
+@media only screen and (max-width: 1050px) {
 
-@media only screen and (max-width: 992px) {
-
-
-    h1 {
-        font-size: 2rem;
+    .experience {
+        overflow: scroll !important;
+        padding-top: 2rem;
     }
+}
+@media only screen and (max-width: 758px) {
 
     .skill {
-        padding-top: 3rem;
+        padding-top: 2rem;
         height: 100vh;
 
         @include mobileDisplay();
@@ -134,7 +135,6 @@ export default {
 
         &__img {
 
-            margin-top: 2rem;
             margin-left: 50px;
             padding:0 2rem;
         }
@@ -146,6 +146,7 @@ export default {
 
             ul{
                 width:auto;
+                padding: 1rem;
             }
         }
     }

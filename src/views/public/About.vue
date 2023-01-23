@@ -7,16 +7,16 @@
             </h1>
             <p>Bonjour, je suis Kone j'ai découvert la programmation en usinage. J'y ai pris gout j'ai donc décidé de me reconvertir
                 pour faire du développement mon métier.
-                Ensuite, j'ai suivi une formation de 6 mois chez la 3wa.<br/> 
+                Ensuite, j'ai suivi une formation de 6 mois chez la 3wa.<br/> <br/>
                 <strong>Ce que je recherche :</strong><br/>
                 un contrat de professionnalisation <br/>
-                un poste développeur web junior. <br/>
+                un poste développeur web junior. <br/><br/>
             </p>
 
             <p> <strong>Ce que je peux vous apporter:</strong><br/>
                 Je suis très autonome, débrouillard ce qui me permet de réagir et de trouver des solutions aux aléas rencontrés.<br/>
                 J'ai une bonne aisance relationnelle, et je suis un moteur positif au sein d'une équipe.<br/>
-                j'ai une bonne maitrise des bases en PHP, javasScript, Sql et des frameworks...
+                j'ai une bonne maitrise des bases en PHP, javasScript et Sql.
                 J'apprends très vite et j'ai un esprit logique.
             </p>
                 <ButtonDownload/>
@@ -73,8 +73,14 @@ export default {
     }
 
 }
+@media only screen and (max-width: 1050px) {
+.about {
+        overflow: scroll !important;
+        padding-top: 2rem;
+    }
+}
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 758px) {
 
 
     svg {

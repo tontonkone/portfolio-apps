@@ -45,8 +45,8 @@ export default {
 <style lang="scss" scoped>
 .content {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 5%;
+    right: 5%;
     z-index: 1;
 
 }
@@ -59,5 +59,14 @@ export default {
     cursor: pointer;
     font-size: 2rem;
     color: yellow;
+}
+
+@media only screen and (max-width: 758px) {
+    .content {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        z-index: 1;
+    }
 }
 </style>

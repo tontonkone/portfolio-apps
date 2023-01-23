@@ -1,5 +1,5 @@
 <template>
-    <button  class="btn"> <a :href="link" target="_blank">PDF</a></button>
+    <button  class="btn"> <a :href="link" target="_blank">Mon CV</a></button>
 </template>
 
 <script>
@@ -8,7 +8,7 @@ export default {
 
     setup(props) {
 
-        const link = 'https://drive.google.com/file/d/1WjjBF_hI1LCkRTl4KzTkNd_MT_P8wJ9v/view'
+        const link = 'https://drive.google.com/file/d/1TRZibVXwXjWzczUBVIMlWxbISme2Kx3s/view?usp=sharing'
         
         return {link}
     }
@@ -17,4 +17,8 @@ export default {
 
 <style lang="scss">
 
+a{
+    text-decoration: none;
+    color: var(--color-link);
+}
 </style>

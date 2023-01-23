@@ -109,9 +109,8 @@ export default {
     height: 100vh;
 
     &__content {
-        margin-left: 50px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        padding: 5rem;
 
     }
 
@@ -119,7 +118,7 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        max-width: 400px;
+        max-width: 300px;
         margin: .8rem;
         padding: 1rem;
         box-shadow: 0 0 22px rgba(0, 0, 0, 0.33);
@@ -188,15 +187,25 @@ export default {
 
 }
 
+@media only screen and (max-width: 1050px) {
+
+    .portfolio {
+        overflow: scroll !important;
+        padding-top: 2rem;
+    }
+}
+
 @media only screen and (max-width:758px) {
 
     .portfolio {
+        padding-top: 2rem;
+        height: 100vh;
         overflow: scroll;
         @include mobileDisplay();
 
         &__content {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns:1fr;
             margin-bottom: 2rem;
         }
 

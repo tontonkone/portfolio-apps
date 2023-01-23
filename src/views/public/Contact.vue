@@ -23,7 +23,7 @@
       </label>
 
       <label>
-        <textarea  rows="10" cols="33" name="message" v-model="text" placeholder="message..."></textarea>
+        <textarea  rows="5" cols="30" name="message" v-model="text" placeholder="message..."></textarea>
       </label>
 
       <button  class="btn" @click.prevent="sendEmail">
@@ -149,9 +149,9 @@ export default {
     background: transparent;
     padding: 1.2rem;
     margin: .5rem;
-    box-shadow: 0 0 11px rgba(0, 0, 0, 0.33);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.33);
 
-    border: none;
+    border: .1px solid var(--color-border-form);
     resize: vertical;
     color: var(--color-text);
     &:focus{
@@ -189,12 +189,15 @@ export default {
   }
 }
 
-@media only screen and (max-width: 992px) {
-
-
-  h1 {
-    font-size: 2rem;
+@media only screen and (max-width: 1050px) {
+  .contact{
+    overflow: scroll !important;
+    padding-top: 2rem;
   }
+}
+
+@media only screen and (max-width: 758px) {
+
 
   .contact {
     padding-top: 2rem;

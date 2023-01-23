@@ -2,12 +2,12 @@
   <div class="social">
     <ul>
         <li>
-            <a href="https://www.linkedin.com/feed/" target="_blank">
+            <a href="https://www.linkedin.com/in/kone-mamoudou-116a3820b/" target="_blank">
                 <i class="fab fa-linkedin-in icon"></i>
             </a>
         </li>
         <li>
-            <a href="https://www.linkedin.com/feed/" target="_blank">
+            <a href="https://github.com/tontonkone" target="_blank">
                 <i class="fab fa-github icon"></i>
             </a>
         </li>
@@ -34,9 +34,16 @@ export default {
 }
 
 ul{
+    padding: 0;
+    display: flex;
     li{
-        display:inline-block;
         list-style: none;
+    }
+}
+
+@media only screen and (max-width: 758px){
+    .icon{
+        font-size: 1.5rem;
     }
 }
 </style>

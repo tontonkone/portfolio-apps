@@ -65,7 +65,7 @@ h1 {
   transform: translateX(2em);
 }
 .route-enter-active, .route-leave-active {
-  transition: all .5s ease;
+  transition: all .8s ease;
 }
 
 </style>

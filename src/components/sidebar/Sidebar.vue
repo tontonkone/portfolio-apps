@@ -19,6 +19,10 @@
         <span class="collapse-icon" :class="{ 'rotate-icon': collapsed }" @click="toggle">
             <i class="fas fa-angle-double-left"></i>
         </span>
+
+        <div class="info">
+            <p>KM <br/>2023</p>
+        </div>
     </div>
 </template>
 
@@ -87,6 +91,15 @@ export default {
     }
     h1 {
         height: 2.5em;
+    }
+
+    .info{
+        position: absolute;
+        bottom: 0;
+        margin: 0 .5rem;
+        p{
+            font-size: .5rem;
+        }
     }
 }
 </style>

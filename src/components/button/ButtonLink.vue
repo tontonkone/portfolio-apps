@@ -13,7 +13,7 @@ export default {
 <style lang="scss">
 //style de button 
 .btn {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
   padding: 13px 50px 13px;
   outline: 0;
@@ -32,5 +32,11 @@ export default {
       color:var(--color-hover-bg);
       border: 3px solid var(--color-hover-border-btn);
     }
+}
+@media only screen and (max-width: 758px) {
+  .btn{
+    font-size: 1.2rem;
+    padding: 10px 20px 13px;
+  }
 }
 </style>
