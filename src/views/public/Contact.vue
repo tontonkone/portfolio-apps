@@ -1,6 +1,6 @@
 <template>
   <div class="contact">
-    <div class="contact__img" :class="{ 'move-text': collapsed }">
+    <div class="contact__img">
       <h1>
         <LetterAnime :classl="classl" :char="title" :idx=1 />
       </h1>
@@ -40,7 +40,6 @@ import Snackbar from '@/components/help/Snackbar.vue';
 import config from '@/config.js'
 import LogoContact from '../../components/logo/LogoContact.vue';
 import LetterAnime from '@/components/letter/LetterAnime.vue';
-import { collapsed } from '@/components/sidebar/state';
 
 export default {
   name: "Contact",
@@ -64,7 +63,6 @@ export default {
       snackbarColor: "",
       classl: 'text-animate',
       title: 'Contact',
-      collapsed
     };
   },
   methods: {
@@ -78,14 +76,14 @@ export default {
     sendEmail() {
       if (!this.email || !this.name || !this.text) {
         this.showSnackbar = true;
-        this.snackbarMessage = "Please all the fields";
+        this.snackbarMessage = "Tous les champs sont obligatoire";
         this.snackbarColor = "rgb(212, 149, 97)";
       } else {
         var obj = {
           email: this.email,
           from_name: this.name,
           message: this.text,
-          to_name: "Natain Bogdan",
+          to_name: "kone mamoudou",
         };
 
         emailjs
@@ -98,7 +96,7 @@ export default {
           .then(
             (result) => {
               this.showSnackbar = true;
-              this.snackbarMessage = "Thanks! Message recieved.";
+              this.snackbarMessage = "Merci! Message envoyé ";
               this.snackbarColor = "#1aa260";
 
               this.email = "";
@@ -107,7 +105,7 @@ export default {
             },
             (error) => {
               this.showSnackbar = true;
-              this.snackbarMessage = "Oops! Something went wrong.";
+              this.snackbarMessage = "Oops! erreur ";
               this.snackbarColor = "rgb(212, 149, 97)";
             }
           );
@@ -164,7 +162,7 @@ export default {
   }
 
   &__info {
-    margin: 1rem 0 2rem 3rem;
+    margin: 1.3rem 0 4rem 3rem;
     flex: 1;
     padding: 1rem;
 
