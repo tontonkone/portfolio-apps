@@ -16,7 +16,7 @@
             <p> <strong>Ce que je peux vous apporter:</strong><br/>
                 Je suis très autonome, débrouillard ce qui me permet de réagir et de trouver des solutions aux aléas rencontrés.<br/>
                 J'ai une bonne aisance relationnelle, et je suis un moteur positif au sein d'une équipe.<br/>
-                j'ai une bonne maitrise des bases en PHP, javasScript et Sql.
+                j'ai une bonne maitrise des bases en PHP, javaScript et Sql.
                 J'apprends très vite et j'ai un esprit logique.
             </p>
                 <ButtonDownload/>

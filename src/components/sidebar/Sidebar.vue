@@ -79,7 +79,7 @@ export default {
     }
     .collapse-icon {
         position: absolute;
-        top: 27rem;
+        top: 28rem;
         left: 1rem;
         color:var(--color-sidebar-icon-bg);
         cursor: pointer;

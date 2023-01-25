@@ -70,7 +70,7 @@ h1 {
 @media only screen and (max-width:758px) {
 
   p{
-    font-size: .8rem;
+    font-size: 1rem;
   }
 }
 </style>

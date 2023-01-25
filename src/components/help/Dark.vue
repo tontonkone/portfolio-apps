@@ -43,6 +43,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+.content{
+    margin: 1rem 0;
+}
 .icon-moon {
     cursor: pointer;
     font-size: 2rem;
