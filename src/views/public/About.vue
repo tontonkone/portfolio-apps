@@ -5,7 +5,7 @@
             <h1>
                 <LetterAnime :classl="classl" :char="title" :idx=1 />
             </h1>
-            <p>Bonjour, je suis Kone j'ai découvert la programmation en usinage. J'y ai pris gout j'ai donc décidé de me reconvertir
+            <p>Bonjour, je suis Kone Mamoudou  j'ai découvert la programmation en usinage. J'y ai pris gout j'ai donc décidé de me reconvertir
                 pour faire du développement mon métier.
                 Ensuite, j'ai suivi une formation de 6 mois chez la 3wa.<br/> <br/>
                 <strong>Ce que je recherche :</strong><br/>
@@ -99,13 +99,10 @@ export default {
 
         &__info {
 
-            margin-top: 2rem;
-            margin-left: 70px;
+            margin: 0 2rem 0 4rem;
         }
 
         &__img {
-
-            margin-top: 2rem;
             margin-left: 70px;
         }
     }

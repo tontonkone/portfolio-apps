@@ -1,6 +1,5 @@
 <template>
-  <Sidebar />
-  <Dark/>  
+  <Sidebar />  
   <transition>
     <router-view v-slot="{Component}">
       <transition name="route" mode="out-in">
@@ -65,7 +64,13 @@ h1 {
   transform: translateX(2em);
 }
 .route-enter-active, .route-leave-active {
-  transition: all .8s ease;
+  transition: all 1s ease;
 }
 
+@media only screen and (max-width:758px) {
+
+  p{
+    font-size: .8rem;
+  }
+}
 </style>

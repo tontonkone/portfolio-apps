@@ -3,7 +3,7 @@
         <router-link :to="to" class="link" :class="{ active: isActive }">
             <i class="icon" :class="icon"></i>
             <transition name="fade">
-                <span v-if="!collapsed">
+                <span v-if="collapsed">
                     <slot></slot>
                 </span>
             </transition>

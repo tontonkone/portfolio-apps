@@ -43,13 +43,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.content {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    z-index: 1;
-
-}
 .icon-moon {
     cursor: pointer;
     font-size: 2rem;
@@ -61,12 +54,4 @@ export default {
     color: yellow;
 }
 
-@media only screen and (max-width: 758px) {
-    .content {
-        position: absolute;
-        top: 15px;
-        right: 30px;
-        z-index: 1;
-    }
-}
 </style>

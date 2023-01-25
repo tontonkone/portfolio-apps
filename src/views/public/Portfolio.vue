@@ -201,6 +201,7 @@ export default {
         padding-top: 2rem;
         height: 100vh;
         overflow: scroll;
+        
         @include mobileDisplay();
 
         &__content {
@@ -211,7 +212,6 @@ export default {
 
         &__logobig {
 
-            margin-top: 2rem;
             margin-left: 70px;
         }
     }

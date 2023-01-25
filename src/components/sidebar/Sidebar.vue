@@ -3,10 +3,10 @@
     <div class="sidebar" :style="{ width: computedSideBarWidth }">
         <div>
             <div v-if="collapsed">
-                <div class="logo-small"><img src="@/assets/img/logo/LogoBas.png" alt="logo" >
+                <div class="logo-big"><img src="@/assets/img/logo/LogoBas.png" alt="logo" >
                 </div>
             </div>
-            <div v-else class="logo-big"><img src="@/assets/img/logo/LogoBas.png" alt="logo">
+            <div v-else class="logo-small"><img src="@/assets/img/logo/LogoBas.png" alt="logo">
             </div>
         </div>
 
@@ -17,8 +17,10 @@
         <SidebarLink to="/contact" icon="fas fa-envelope">Contact</SidebarLink>
 
         <span class="collapse-icon" :class="{ 'rotate-icon': collapsed }" @click="toggle">
-            <i class="fas fa-angle-double-left"></i>
+            <i class="fas fa-angle-double-right"></i>
         </span>
+
+        <Dark />
 
         <div class="info">
             <p>KM <br/>2023</p>
@@ -27,12 +29,13 @@
 </template>
 
 <script>
-import { collapsed, toggle, computedSideBarWidth } from './state.js'
+import { collapsed, toggle, computedSideBarWidth } from './state.js';
+import Dark from '../help/Dark.vue';
 import SidebarLink from './SidebarLink.vue';
 
 export default {
     props: {},
-    components: { SidebarLink },
+    components: { SidebarLink,Dark },
     setup() {
 
         collapsed.value = JSON.parse(localStorage.getItem('collapsed'))

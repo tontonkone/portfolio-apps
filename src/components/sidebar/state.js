@@ -19,4 +19,4 @@ export const SIDEBAR_W_COLLAPSED = 38
 
 // function de calculée d'etat si collopased true  180 sinon 38 
 export const computedSideBarWidth = computed(
-    () => `${collapsed.value ? SIDEBAR_W_COLLAPSED : SIDEBAR_W}px `)
+    () => `${collapsed.value ? SIDEBAR_W : SIDEBAR_W_COLLAPSED}px `)
