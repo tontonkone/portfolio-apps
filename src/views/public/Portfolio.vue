@@ -12,8 +12,10 @@
                     <img :src="project.pictures" :alt="project.name">
                 </div>
                 <div class="portfolio__desc">
-                    <p>{{ project.name }}</p>
-                    <p class="text">
+                    <p>
+                        {{ project.name }}
+                    </p>
+                    <p>
                         {{ project.description }}
                     </p>
                 </div>
@@ -37,7 +39,6 @@
 <script>
 import LetterAnime from '@/components/letter/LetterAnime.vue';
 import { ref } from 'vue';
-import { collapsed } from '@/components/sidebar/state';
 
 export default {
     components: { LetterAnime },
@@ -208,6 +209,9 @@ export default {
             display: grid;
             grid-template-columns:1fr;
             margin-bottom: 2rem;
+            p{
+                font-size: 1rem;
+            }
         }
 
         &__logobig {
